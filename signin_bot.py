@@ -5,6 +5,7 @@ from jproperties import Properties
 # Read from config file
 configs = Properties()
 
+
 with open('config.properties', 'rb') as config_file:
     configs.load(config_file)
 
@@ -62,9 +63,13 @@ password = driver.find_element_by_id("inputSmsCode")
 password.send_keys(PASSWORD)
 
 driver.implicitly_wait(0.5)
+
+time.sleep(1)
     
 login = driver.find_element_by_xpath('//*[@id="connexion"]')
 login.click()
+
+time.sleep(1)
 
 print(driver.current_url)
 
