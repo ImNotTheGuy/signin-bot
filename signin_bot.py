@@ -109,3 +109,8 @@ driver.get(link_to_get)
 
 
 driver.implicitly_wait(0.5)
+
+
+time.sleep(1)
+
+driver.close()
